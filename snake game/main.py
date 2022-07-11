@@ -39,15 +39,15 @@ while is_game_on:
         score.increase_score()
 
     if snake.segments[0].xcor() < -300 or snake.segments[0].xcor() > 300 or snake.segments[0].ycor() < -300 or snake.segments[0].ycor() > 300:
-        is_game_on = False
-        score.game_over()
-    
+        score.reset()
+        snake.reset()
     
     for seg in snake.segments[1:]:
        
          if snake.segments[0].distance(seg) < 10:
-            is_game_on = False
-            score.game_over()
+           score.reset()
+           snake.reset()
+           
 
 
 
