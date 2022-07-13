@@ -33,9 +33,9 @@ data = pandas.read_csv("./working-with-data/champions.csv")
 # Get data in row
 # print(data[data.name == 'baen'])
 
-baen = data[data.name == 'baen']
+# baen = data[data.name == 'baen']
 
-print((baen))
+# print((baen))
 
 #Creating Data Frame from scratch
 
@@ -46,3 +46,6 @@ print((baen))
 
 # data = pandas.DataFrame(data_dict)
 # data.to_csv("./working-with-data/new-data.csv")
+
+for (key,row) in data.iterrows():
+    print(row.name)
